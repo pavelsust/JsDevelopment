@@ -1,19 +1,8 @@
 
-
-var name = 'pavel'
-console.log(name)
-
-name = 1
-
-var a =10
-
-if (a == name){
-    console.log('yes')
-}else {
-    console.log('No')
+const Event = require('events')
+class HelloWorld extends Event{
+    log(message){
+        this.emit('message', {id : 1 , url: 'https:www.google.com'})
+    }
 }
-console.log(name)
-show()
-function show(){
-    console.log('hello')
-}
+module.exports = HelloWorld
