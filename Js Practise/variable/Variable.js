@@ -1,17 +1,7 @@
-const path = require('path')
 
-const world = require('./../HelloWorld')
 
-let event = new EventEmitter()
 
-event.on('message', function (){
-    console.log('Listener works')
-});
 
-event.emit('message')
-
-let pathObjct = path.parse(__filename)
-console.log(pathObjct)
 
 let a = 10;
 /**
@@ -58,3 +48,32 @@ console.log(y)
 
 let z = 16 + 4 + 'volvo'
 console.log(z)
+
+let isShow = false
+console.log(isShow)
+
+// object data type
+
+let person = {"name": "pavel" , "job": 2 }
+console.log(person.name)
+
+// global and local variable
+
+let globalVariable = 'global variable'
+console.log(globalVariable)
+
+fun()
+function fun(){
+    console.log(globalVariable)
+}
+
+let myObject = {1: 3 , 2: 3}
+console.log(myObject["1"])
+
+let person1 = new Person()
+console.log(person1)
+
+class Person{
+
+    
+}
