@@ -30,7 +30,7 @@ function show (parm1 , parm2){
  *
  *  We can use Arrow Function when
  *  Arrow functions shine best with anything that requires this to be bound to the context
- *  , and not the function itself.
+ *  and not the function itself.
  *
  *
  */
@@ -66,3 +66,8 @@ function isValid(){
 }
 
 console.log(isValid())
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+let result = array.filter(args => args%3==0)
+console.log(result)

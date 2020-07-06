@@ -1,8 +1,4 @@
 
-
-
-
-
 let a = 10;
 /**
  *  var is a function scoping variable
@@ -15,7 +11,6 @@ let a = 10;
 
 console.log(a)
 console.log(a)
-
 
 let b = 10
 console.log(b)
