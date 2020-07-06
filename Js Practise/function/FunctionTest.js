@@ -23,6 +23,17 @@ function show (parm1 , parm2){
  *
  * @type {{count: obj.count, id: number}}
  */
+
+
+/**
+ *
+ *
+ *  We can use Arrow Function when
+ *  Arrow functions shine best with anything that requires this to be bound to the context
+ *  , and not the function itself.
+ *
+ *
+ */
 let obj = {
     id: 42,
     count: function count() {
@@ -43,3 +54,15 @@ let feedTheCat = (cat) => {
 }
 
 console.log(feedTheCat('pavel'))
+
+//function expression
+let sayHello = () => {
+    console.log("Hello from Flatiron School")
+}
+sayHello()
+
+function isValid(){
+    return false
+}
+
+console.log(isValid())
