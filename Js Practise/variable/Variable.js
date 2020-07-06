@@ -69,11 +69,3 @@ function fun(){
 
 let myObject = {1: 3 , 2: 3}
 console.log(myObject["1"])
-
-let person1 = new Person()
-console.log(person1)
-
-class Person{
-
-    
-}

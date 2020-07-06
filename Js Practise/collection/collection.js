@@ -1,5 +1,13 @@
 
 
+
+/// pop => removes the last element
+/// push => add the element in the last
+/// find => find the array element in the array
+/// Splice => remove a element from a index
+///
+
+
 let selectedColors = ['red' , 'blue']
 let array = [10, 20, 30, 40, 50];
 let arrayResult = array.find(args => args>30)
@@ -48,7 +56,15 @@ for( let index in myarray){
 
 let nums1 = [1, 2, 3, 4]
 let nums2 = [3, 4, 5, 6]
-let nums3 = [5, 6, 7, 8]
+let nums3 = [ 6, 5 ,  7, 8]
+
+
+let index = nums1.indexOf(2)
+if (index>=1){
+    nums1.splice(index , 1)
+}
+
+console.log(`after splice ${nums1}`)
 
 let resultConcate  = nums1.concat(nums2 , nums3)
 console.log(resultConcate)
@@ -69,3 +85,69 @@ function mergeNoDuplicates(...arrays) {
 }
 
 console.log(mergeNoDuplicates(nums1, nums2, nums3));
+
+
+let myObject = new Object();
+// person.firstName = "John";
+// person.lastName = "Doe";
+// person.age = 50;
+// person.eyeColor = "blue";
+myObject.job = 'job'
+myObject.salary = '10'
+myObject.gf = 'null'
+
+
+myObject.job = 'job 2'
+myObject.salary = '20'
+myObject.gf = 'null'
+
+
+let forPop = [{'name': 'name' , id: 1 } , {'name': 'name 2', id:2}]
+let popResult = forPop.pop(args => {
+    return args.id===1;
+})
+console.log(popResult.name)
+
+console.log(`convert to String ${nums1.toString()}`)
+
+console.log(`sort number3 array ${nums3.sort()}`)
+console.log(`sort number3 array ${nums3.reverse()}`)
+
+var points = [40, 100, 1, 5, 25, 10];
+points.sort((a, b) => {return a - b});
+
+console.log(points)
+
+points.sort((a , b )=> b-a)
+console.log(points)
+
+
+
+/// find a bug number from the array
+let bigNum = [1, 2, 3, 4 , 10 , 4 ,3 ,2, 50 , 1 , 40 , 100 , 400 ,100]
+let bigResult = bigNum[0];
+// for (let i =0 ; i<bigNum.length-1 ; i++){
+//     if (bigNum[i] > bigNum[i+1]){
+//         bigResult = bigNum[i]
+//     }else {
+//         bigResult = bigNum[i+1]
+//     }
+// }
+// console.log(bigResult)
+
+for (let i =0 ; i<bigNum.length ; i++){
+    if (bigResult<bigNum[i]){
+        bigResult = bigNum[i]
+    }
+}
+
+console.log(bigResult)
+
+let smallResult = bigNum[13];
+for (let i =0 ; i<bigNum.length ; i++){
+  if (bigNum[i]< smallResult){
+      smallResult = bigNum[i]
+  }
+}
+console.log(smallResult)
+
