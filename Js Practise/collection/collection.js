@@ -152,11 +152,15 @@ for (let i =0 ; i<bigNum.length ; i++){
 console.log(smallResult)
 
 
+
+//// for..in returns a list of keys on the object being iterated
+//// for..of returns a list of values of the numeric properties of the object being iterated.
+
 let newArray = new Array()
 newArray.push({'name': 'name' , id : 1} , {'name': 'name 2' , id: 2})
 
-for (let item in newArray){
-    console.log(`item ${newArray[item]}`)
+for (let item of newArray){
+    console.log(`item ${item.name}`)
 }
 
 for (let i =0 ; i <newArray.length ; i++){
