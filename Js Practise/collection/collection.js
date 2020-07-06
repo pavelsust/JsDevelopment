@@ -151,3 +151,18 @@ for (let i =0 ; i<bigNum.length ; i++){
 }
 console.log(smallResult)
 
+
+let newArray = new Array()
+newArray.push({'name': 'name' , id : 1} , {'name': 'name 2' , id: 2})
+
+for (let item in newArray){
+    console.log(`item ${newArray[item]}`)
+}
+
+for (let i =0 ; i <newArray.length ; i++){
+    console.log(`i ${newArray[i]}`)
+}
+
+newArray.forEach((a , b)=> {
+    console.log(`name is ${a.name} ` + ` id is ${b}`)
+})
