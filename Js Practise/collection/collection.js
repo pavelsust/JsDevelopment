@@ -170,3 +170,39 @@ for (let i =0 ; i <newArray.length ; i++){
 newArray.forEach((a , b)=> {
     console.log(`name is ${a.name} ` + ` id is ${b}`)
 })
+
+
+// filter in array
+
+let filterArray = [1 , 3, -1 , 4, 5]
+let filterResult = filterArray.filter(args =>{
+    return args >0
+})
+
+console.log(filterResult)
+
+
+/**
+ *  1. The map() method creates a new array with the results of calling a function for every array element.
+ *  2. The map() method calls the provided function once for each element in an array, in order.
+ *
+ */
+
+let numbers = [65, 44, 12, 4];
+
+function myFunction(numbers){
+    return numbers *10
+}
+
+let mapResult = numbers.map(myFunction)
+console.log(mapResult)
+
+let persons = [{firstName : 'pavel' , lastName: 'robin'} , {firstName : 'pavel' , lastName: 'robin'} ,
+    {firstName : 'pavel' , lastName: 'robin'}]
+
+function myFunction(value){
+    return value.firstName + ' '+ value.lastName
+}
+
+let personResult = persons.map(myFunction)
+console.log(personResult)
