@@ -201,8 +201,103 @@ let persons = [{firstName : 'pavel' , lastName: 'robin'} , {firstName : 'pavel' 
     {firstName : 'pavel' , lastName: 'robin'}]
 
 function myFunction(value){
-    return value.firstName + ' '+ value.lastName
+    return value.firstName + ' '+value.lastName
 }
 
 let personResult = persons.map(myFunction)
 console.log(personResult)
+
+
+let map = new Map()
+map.set('1', 'string')
+map.set(1 , 'number')
+map.set(true , 'boolean')
+map.set(2 , 4)
+
+console.log(map.get(2))
+
+for (let index of map.keys()){
+    console.log(index)
+}
+
+for(let index of map.values()){
+    console.log(index)
+}
+
+for (let index of map){
+    console.log(index)
+}
+
+map.forEach((value , key , map)=>{
+    console.log(`key is ${key}`+ ` value is ${value}`)
+})
+
+//copy a object into the map
+
+let obj = {
+    name: 'pavel',
+    roll: '42',
+    age: 26
+}
+
+let objMap = new Map(Object.entries(obj))
+console.log(objMap.get('name'))
+
+let mapPrice = new Map([
+    ['banana', 1],
+    ['orange', 2],
+    ['meat', 4]]
+);
+
+let recipeMap = new Map([
+    ['cucumber', 500],
+    ['tomatoes', 350],
+    ['onion',    50]
+]);
+
+
+let prices = Object.fromEntries([
+    ['banana', 1],
+    ['orange', 2],
+    ['meat', 4]
+]);
+
+console.log(prices.banana)
+
+
+/**
+ *
+ *  1. A Set is a special type collection – “set of values” (without keys), where each value may occur only once.
+ *  2.
+ */
+
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+    "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+function unique(arr) {
+    return Array.from(new Set(arr))
+}
+
+console.log(unique(values))
+
+let set = new Set(["oranges", "apples", "bananas"]);
+set.delete('oranges')
+
+set.forEach((value )=>{
+    console.log(value)
+})
+
+for (let item of set){
+    show(item)
+}
+
+function show(value){
+    console.log(value)
+}
+
+let testSet = new Set(['name' , 'pavel'])
+
+testSet.forEach(value => {
+    show(value)
+})
