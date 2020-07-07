@@ -123,3 +123,5 @@ function Circle(radius){
 
 let circle = new Circle(1)
 console.log(circle.radius)
+
+
