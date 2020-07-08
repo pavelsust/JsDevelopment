@@ -301,3 +301,10 @@ let testSet = new Set(['name' , 'pavel'])
 testSet.forEach(value => {
     show(value)
 })
+
+let reduceArray = [1 , 4, 5, -1]
+let resultReduce = reduceArray.reduce((accumulator , currentValue) =>{
+    return accumulator+currentValue
+})
+
+console.log(resultReduce)
