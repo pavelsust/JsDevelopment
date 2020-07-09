@@ -1,6 +1,9 @@
 
 const http = require('http')
 const hello = require('./../HelloWorld')
+const ConnectionCount = require('./ConnectionCount')
+
+let connectionCount = new ConnectionCount()
 
 const server = http.createServer((request , response)=>{
     console.log(request)
@@ -13,8 +16,7 @@ const server = http.createServer((request , response)=>{
 })
 
 server.on('connection' , (args)=>{
-    console.log('New connection ....')
+    console.log('New connection ....'+connectionCount.showCount())
 })
 
 server.listen(3000)
-console.log('Listening on port 3000')

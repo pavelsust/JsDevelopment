@@ -10,10 +10,6 @@ const Person = require('./Person')
 
         }
     }
-
-    Teacher.show = function show(){
-
-     }
     showAge(){
         console.log(this.age)
     }
