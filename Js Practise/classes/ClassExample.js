@@ -2,13 +2,12 @@
  *  class example
  *
  */
-import {Teacher} from "./Teacher";
 
+const Teacher  = require('./Teacher')
 
 let teacher = new Teacher('pavel' , 20)
 teacher.showAge()
 teacher.walk()
-
 
 
 // class Person{

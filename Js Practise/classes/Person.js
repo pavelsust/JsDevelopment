@@ -1,4 +1,4 @@
-export class Person{
+class Person{
     constructor(name) {
     this.name = name
     }
@@ -6,3 +6,5 @@ export class Person{
         console.log(this.name)
     }
 }
+
+module.exports = Person
