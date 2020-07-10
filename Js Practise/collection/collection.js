@@ -13,6 +13,13 @@ let array = [10, 20, 30, 40, 50];
 let arrayResult = array.find(args => args>30)
 console.log(arrayResult)
 
+let objectArray = [{id:1, "name":"pavel"},{id:1, "name":"pavel"},{id:1, "name":"pavel"},{id:1, "name":"pavel"},]
+let objectArrayResult = objectArray.find((args)=>{
+    if (args.id===1) return args
+})
+
+console.log(objectArrayResult)
+
 let selectedResult = selectedColors.find(args => args=='yellow')
 console.log(selectedResult)
 
