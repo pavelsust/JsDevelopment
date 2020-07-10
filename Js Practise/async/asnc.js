@@ -54,6 +54,7 @@ getUser(4)
     .then(user => getUserRepoList(user))
     .then(repo => getUserComment(repo))
     .then(commits => console.log(commits))
+    .catch(error => console.log(error))
 
 console.log('After')
 
