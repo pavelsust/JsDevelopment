@@ -50,12 +50,26 @@
 
 console.log('Before')
 
-getUser(4)
-    .then(user => getUserRepoList(user))
-    .then(repo => getUserComment(repo))
-    .then(commits => console.log(commits))
-    .catch(error => console.log(error))
+// getUser(4)
+//     .then(user => getUserRepoList(user))
+//     .then(repo => getUserComment(repo))
+//     .then(commits => console.log(commits))
+//     .catch(error => console.log(error))
 
+
+
+async function displayCommits () {
+    try{
+        const user = await getUser(3)
+        const repo = await getUserRepoList(user)
+        const commits = await getUserComment(repo)
+    } catch (e) {
+        console.log(e)
+    }
+    console.log(commits)
+}
+
+displayCommits()
 console.log('After')
 
 
@@ -73,7 +87,8 @@ function getUserRepoList(user){
         setTimeout(()=>{
             console.log(user.name)
             console.log('Calling github database for user repo')
-            resolve(['repo1' , "repo2", 'repo3'])
+            //resolve(['repo1' , "repo2", 'repo3'])
+            reject(new Error('error'))
         } , 2000)
     })
 }
@@ -89,3 +104,4 @@ function getUserComment(repo){
 }
 
 
+// Async and Await approch
